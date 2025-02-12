@@ -138,18 +138,6 @@ zsh
 arandr
 xclip
 xdotool
-xf86-input-evdev
-xf86-input-libinput
-xf86-input-synaptics
-xf86-input-vmmouse
-xf86-input-void
-xf86-input-wacom
-xf86-video-amdgpu
-xf86-video-intel
-xf86-video-nouveau
-# xf86-video-openchrome
-xf86-video-qxl
-xf86-video-vmware
 xl2tpd
 xorg-server
 xorg-xkill
@@ -160,14 +148,45 @@ xorg-xset
 xorg-xsetroot
 xterm
 xwallpaper
+xf86-input-evdev
+xf86-input-libinput
+xf86-input-synaptics
+xf86-input-vmmouse
+xf86-input-void
+xf86-input-wacom
+xf86-video-amdgpu
+xf86-video-intel
+xf86-video-nouveau
+xf86-video-openchrome
+xf86-video-qxl
+xf86-video-vmware
+nvidia
 nvidia-dkms
 nvidia-utils
 nvidia-settings
+mesa
+lib32-mesa
+vulkan-radeon
 
 ## Desktop ##
-plasma
 sddm
-konsole
+alacritty
+curl
+dmenu
+feh
+firefox
+fish
+gtk3
+i3-wm
+i3status
+lua
+luarocks
+maim
+neovim
+papirus-icon-theme
+picom
+thunar
+unzip
 pipewire
 pulseaudio
 adobe-source-code-pro-fonts
@@ -203,12 +222,9 @@ neovim
 networkmanager
 network-manager-applet
 polkit
-wget
-curl
-neofetch
+sudo
 xdg-desktop-portal
 xdg-desktop-portal-kde
 xdg-user-dirs
 
 ## Applications ##
-firefox

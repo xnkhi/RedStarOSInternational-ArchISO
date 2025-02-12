@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git clone https://github.com/the-duat/nile
+cd nile
+chmod 777 install
+./install
