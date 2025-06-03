@@ -1,3 +1,4 @@
 #!/bin/bash
 
 sudo mkarchiso -v -o ./output src
+sudo rm -rf work
