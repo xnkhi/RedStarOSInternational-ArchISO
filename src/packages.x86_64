@@ -167,18 +167,6 @@ mesa
 lib32-mesa
 vulkan-radeon
 
-## Desktop ##
-gnome
-gnome-terminal
-gnome-tweaks
-gnome-browser-connector
-firefox
-nautilus
-gedit
-adobe-source-han-sans-kr-fonts
-papirus-icon-theme
-picom
-thunar
 
 ## Utilities ##
 base-devel
@@ -204,5 +192,15 @@ zip
 unzip
 curl
 wget
+firefox
+nautilus
+gedit
 
-## Applications ##
+
+## Desktop ##
+gnome
+gnome-terminal
+gnome-tweaks
+gnome-shell-extensions
+gnome-browser-connector
+adobe-source-han-sans-kr-fonts
