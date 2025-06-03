@@ -2,7 +2,7 @@
 set -e
 
 ### replace gnome wallpapers ###
-echo -e "configure-desktop-dprk hook ran."
+echo -e "configure-desktop-dprk pacman hook ran."
 rm /usr/share/backgrounds/gnome/*
 mv /etc/wallpapers/* /usr/share/backgrounds/gnome/
 
