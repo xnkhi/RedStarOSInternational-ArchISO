@@ -2,5 +2,5 @@
 set -e
 
 # replace gnome wallpapers
-rm -f /usr/share/backgrounds/gnome/*
+rm /usr/share/backgrounds/gnome/*
 mv /etc/wallpapers/* /usr/share/backgrounds/gnome/

@@ -1,9 +1,8 @@
 # remove from airootfs!
 [Trigger]
 Operation = Install
-Operation = Upgrade
 Type = Package
-Target = gnome
+Target = gnome-backgrounds
 
 [Action]
 When = PostTransaction
