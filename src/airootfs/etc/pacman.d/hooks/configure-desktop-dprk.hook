@@ -5,4 +5,4 @@ Target = gnome-backgrounds
 
 [Action]
 When = PostTransaction
-Exec = /usr/configure-desktop-dprk
+Exec = /bin/sh -c "configure-desktop-dprk"
