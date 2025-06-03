@@ -1,0 +1,10 @@
+# remove from airootfs!
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = gnome
+
+[Action]
+When = PostTransaction
+Exec = /usr/local/bin/configure-desktop-dprk
