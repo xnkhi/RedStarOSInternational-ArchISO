@@ -169,42 +169,19 @@ lib32-mesa
 vulkan-radeon
 
 ## Desktop ##
-sddm
-alacritty
-curl
-dmenu
-feh
+gnome
+gnome-terminal
+gnome-tweaks
+gnome-browser-connector
 firefox
-fish
-gtk3
-i3-wm
-i3status
-lua
-luarocks
-maim
-neovim
+nautilus
+gedit
+
+
+
 papirus-icon-theme
 picom
 thunar
-unzip
-pipewire
-pulseaudio
-adobe-source-code-pro-fonts
-adobe-source-sans-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-otf-font-awesome
-# otf-raleway
-ttf-hack-nerd
-ttf-jetbrains-mono
-ttf-jetbrains-mono-nerd
-ttf-joypixels
-ttf-mononoki-nerd
-# ttf-ms-fonts
-ttf-noto-nerd
-ttf-ubuntu-font-family
-ttf-ubuntu-nerd
-ttf-ubuntu-mono-nerd
 
 ## Utilities ##
 base-devel
@@ -226,5 +203,9 @@ sudo
 xdg-desktop-portal
 xdg-desktop-portal-kde
 xdg-user-dirs
+zip
+unzip
+curl
+wget
 
 ## Applications ##
