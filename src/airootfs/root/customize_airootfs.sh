@@ -22,5 +22,5 @@ rm -rf WhiteSur-gtk-theme
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme
 chmod +x WhiteSur-icon-theme/install.sh
 echo "Running WhiteSur Icons Installer"
-./Whitesur-icon-theme/install.sh -d /usr/share/icons -n Taeyang-Icons -t red -a
+./WhiteSur-icon-theme/install.sh -d /usr/share/icons -n Taeyang-Icons -t red -a
 rm -rf WhiteSur-icon-theme
