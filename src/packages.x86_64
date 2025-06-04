@@ -208,7 +208,7 @@ gnome-browser-connector
 adobe-source-han-sans-kr-fonts
 sassc
 glib2
-libxm12
+libxml2
 imagemagick
 dialog
 ostree
