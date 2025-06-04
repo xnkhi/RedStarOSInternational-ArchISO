@@ -196,6 +196,7 @@ wget
 firefox
 nautilus
 gedit
+jq
 
 
 ## Desktop ##

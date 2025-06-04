@@ -1,0 +1,1 @@
+systemctl --user enable gnome-setup.service

@@ -1,0 +1,10 @@
+[Unit]
+Description=GNOME root session setup
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/root/customize_gnome.sh
+
+[Install]
+WantedBy=default.target
