@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/root/customize_gnome.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Customize GNOME
+Comment=Run GNOME customization script
