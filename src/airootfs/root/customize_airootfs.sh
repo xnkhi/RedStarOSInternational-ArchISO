@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 ### replace gnome wallpapers ###
 echo "configure-desktop-dprk ran."
