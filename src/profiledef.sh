@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="redstaros"
+iso_name="RedStarOS-International"
 iso_label="ROSI_$(date +%Y%m)"
 iso_publisher="KP-Korea.org <https://kp-korea.org>"
 iso_application="Red Star OS International Live/Rescue CD"

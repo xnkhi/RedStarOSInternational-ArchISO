@@ -1,8 +1,0 @@
-[Trigger]
-Operation = Install
-Type = Package
-Target = gnome-backgrounds
-
-[Action]
-When = PostTransaction
-Exec = /bin/sh -c "configure-desktop-dprk"

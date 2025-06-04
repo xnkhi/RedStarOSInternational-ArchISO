@@ -2,7 +2,7 @@
 set -e
 
 ### replace gnome wallpapers ###
-echo -e "configure-desktop-dprk pacman hook ran."
+echo "configure-desktop-dprk pacman hook ran."
 rm /usr/share/backgrounds/gnome/*
 mv /etc/wallpapers/* /usr/share/backgrounds/gnome/
 
@@ -41,6 +41,7 @@ chmod +x WhiteSur-gtk-theme/tweaks.sh
 ./WhiteSur-gtk-theme/install.sh -d /usr/share/themes -l -n Taeyang -c light -t red --shell -i simple --silent-mode
 ./WhiteSur-gtk-theme -g -b "/etc/default-wallpaper/wallpaper.png"
 rm -rf Whitesur-gtk-theme
+gsettings set org.gnome.desktop.interface gtk-theme 'Taeyang'
 
 
 ### icon theme ###
@@ -49,3 +50,4 @@ git clone https://github.com/vinceliuice/WhiteSur-icon-theme
 chmod +x Whitesur-icon-theme/install.sh
 ./Whitesur-icon-theme/install.sh -d /usr/share/icons -n Taeyang-Icons -t red -a
 rm -rf Whitesur-icon-theme
+gsettings set org.gnome.desktop.interface icon-theme 'Taeyang-Icons'
