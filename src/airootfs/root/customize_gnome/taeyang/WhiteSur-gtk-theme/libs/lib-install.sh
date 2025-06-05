@@ -688,30 +688,30 @@ install_firefox_theme() {
   remove_firefox_theme
 
   udo mkdir -p                                                                                "${TARGET_DIR}"
-  udo mvf "${FIREFOX_SRC_DIR}"/customChrome.css                                            "${TARGET_DIR}"
+  udo mv -f "${FIREFOX_SRC_DIR}"/customChrome.css                                            "${TARGET_DIR}"
 
   mkdir -p                                                                                    "${TARGET_DIR}"
-  mvf "${FIREFOX_SRC_DIR}/${theme_name}"                                                   "${TARGET_DIR}"
+  mv -f "${FIREFOX_SRC_DIR}/${theme_name}"                                                   "${TARGET_DIR}"
   [[ -f "${TARGET_DIR}"/customChrome.css ]] && mv "${TARGET_DIR}"/customChrome.css            "${TARGET_DIR}"/customChrome.css.bak
-  mvf "${FIREFOX_SRC_DIR}"/customChrome.css                                                "${TARGET_DIR}"
-  mvf "${FIREFOX_SRC_DIR}"/common/{icons,pages}                                            "${TARGET_DIR}/${theme_name}"
+  mv -f "${FIREFOX_SRC_DIR}"/customChrome.css                                                "${TARGET_DIR}"
+  mv -f "${FIREFOX_SRC_DIR}"/common/{icons,pages}                                            "${TARGET_DIR}/${theme_name}"
 
   if [[ "${colorscheme}" == '-nord' ]]; then
-    mvf "${FIREFOX_SRC_DIR}"/common/titlebuttons-nord                                      "${TARGET_DIR}/${theme_name}"/titlebuttons
+    mv -f "${FIREFOX_SRC_DIR}"/common/titlebuttons-nord                                      "${TARGET_DIR}/${theme_name}"/titlebuttons
   else
-    mvf "${FIREFOX_SRC_DIR}"/common/titlebuttons                                           "${TARGET_DIR}/${theme_name}"
+    mv -f "${FIREFOX_SRC_DIR}"/common/titlebuttons                                           "${TARGET_DIR}/${theme_name}"
   fi
 
-  mvf "${FIREFOX_SRC_DIR}"/common/*.css                                                    "${TARGET_DIR}/${theme_name}"
-  mvf "${FIREFOX_SRC_DIR}"/common/parts/*.css                                              "${TARGET_DIR}/${theme_name}"/parts
+  mv -f "${FIREFOX_SRC_DIR}"/common/*.css                                                    "${TARGET_DIR}/${theme_name}"
+  mv -f "${FIREFOX_SRC_DIR}"/common/parts/*.css                                              "${TARGET_DIR}/${theme_name}"/parts
   [[ -f "${TARGET_DIR}"/userChrome.css ]] && mv "${TARGET_DIR}"/userChrome.css                "${TARGET_DIR}"/userChrome.css.bak
-  mvf "${FIREFOX_SRC_DIR}"/userChrome-"${theme_name}${theme_type}".css                     "${TARGET_DIR}"/userChrome.css
+  mv -f "${FIREFOX_SRC_DIR}"/userChrome-"${theme_name}${theme_type}".css                     "${TARGET_DIR}"/userChrome.css
   [[ -f "${TARGET_DIR}"/userContent.css ]] && mv "${TARGET_DIR}"/userContent.css              "${TARGET_DIR}"/userContent.css.bak
-  mvf "${FIREFOX_SRC_DIR}"/userContent-"${theme_name}${theme_type}".css                    "${TARGET_DIR}"/userContent.css
+  mv -f "${FIREFOX_SRC_DIR}"/userContent-"${theme_name}${theme_type}".css                    "${TARGET_DIR}"/userContent.css
 
   if [[ "${firefoxtheme}" == 'Flat' && "${theme_name}" == 'Monterey' ]]; then
-    mvf "${FIREFOX_SRC_DIR}"/userChrome-Monterey-alt"${theme_type}".css                    "${TARGET_DIR}"/userChrome.css
-    mvf "${FIREFOX_SRC_DIR}"/WhiteSur/parts/headerbar-urlbar.css                           "${TARGET_DIR}"/Monterey/parts/headerbar-urlbar-alt.css
+    mv -f "${FIREFOX_SRC_DIR}"/userChrome-Monterey-alt"${theme_type}".css                    "${TARGET_DIR}"/userChrome.css
+    mv -f "${FIREFOX_SRC_DIR}"/WhiteSur/parts/headerbar-urlbar.css                           "${TARGET_DIR}"/Monterey/parts/headerbar-urlbar-alt.css
   fi
 
   if [[ "${window}" == "alt" ]]; then
@@ -896,7 +896,7 @@ disconnect_flatpak() {
 #########################################################################
 
 gtk_base() {
-  mvf "${THEME_SRC_DIR}/sass/_gtk-base"{".scss","-temp.scss"}
+  mv -f "${THEME_SRC_DIR}/sass/_gtk-base"{".scss","-temp.scss"}
 
   # Theme base options
   if [[ "${compact}" == 'false' ]]; then
@@ -926,7 +926,7 @@ gtk_base() {
 }
 
 shell_base() {
-  mvf "${THEME_SRC_DIR}/main/gnome-shell/_shell-base"{".scss","-temp.scss"}
+  mv -f "${THEME_SRC_DIR}/main/gnome-shell/_shell-base"{".scss","-temp.scss"}
 
   sed $SED_OPT "/\widgets/s/46-0/$GNOME_VERSION/"                               "${THEME_SRC_DIR}/main/gnome-shell/_shell-base-temp.scss"
 
@@ -942,7 +942,7 @@ shell_base() {
 ###############################################################################
 
 customize_theme() {
-  mvf "${THEME_SRC_DIR}/sass/_theme-options"{".scss","-temp.scss"}
+  mv -f "${THEME_SRC_DIR}/sass/_theme-options"{".scss","-temp.scss"}
 
   if [[ "${GNOME_VERSION}" -ge '47-0' ]]; then
     sed $SED_OPT "/\$shell_version/s/old/new/"                                  "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"

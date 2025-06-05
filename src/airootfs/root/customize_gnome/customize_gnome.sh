@@ -11,12 +11,10 @@ mv /root/customize_gnome/wallpapers/* /usr/share/backgrounds/gnome/
 ### gnome extensions ###
 
 echo "Installing gnome extensions."
-gnome-extensions install --force "/root/customize_gnome/extensions/user-theme@gnome-shell-extensions.gcampax.github.com.zip"
-gnome-extensions install --force "/root/customize_gnome/extensions/dash-to-dock@micxgx.gmail.com.zip"
-gnome-extensions install --force "/root/customize_gnome/extensions/blur-my-shell@aunetx.zip"
-gnome-extensions enable "/root/customize_gnome/extensions/user-theme@gnome-shell-extensions.gcampax.github.com.zip"
-gnome-extensions enable "/root/customize_gnome/extensions/dash-to-dock@micxgx.gmail.com.zip"
-gnome-extensions enable "/root/customize_gnome/extensions/blur-my-shell@aunetx.zip"
+mv -f /root/customize_gnome/extensions/* /usr/share/gnome-shell/extensions/
+gnome-extensions enable "user-theme@gnome-shell-extensions.gcampax.github.com"
+gnome-extensions enable "dash-to-dock@micxgx.gmail.com"
+gnome-extensions enable "blur-my-shell@aunetx"
 
 
 ### gtk theme ###
@@ -25,7 +23,7 @@ gnome-extensions enable "/root/customize_gnome/extensions/blur-my-shell@aunetx.z
 echo "Running Whitesur gtk Installer."
 chmod +x /root/customize_gnome/taeyang/WhiteSur-gtk-theme/install.sh
 chmod +x /root/customize_gnome/taeyang/WhiteSur-gtk-theme/tweaks.sh
-/root/customize_gnome/taeyang/WhiteSur-gtk-theme/install.sh -d /usr/share/themes -l -n Taeyang -c light -t red --shell -i simple --silent-mode
+/root/customize_gnome/taeyang/WhiteSur-gtk-theme/install.sh -d /usr/share/themes -l -n Taeyang -c light -t red --shell -i simple --silent-mode -f
 /root/customize_gnome/taeyang/WhiteSur-gtk-theme/tweaks.sh -g -b "/etc/default-wallpaper/wallpaper.png"
 
 
@@ -38,10 +36,10 @@ chmod +x /root/customize_gnome/taeyang/WhiteSur-icon-theme/install.sh
 ### gsettings ###
 
 gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:"
-gsettings set org.gnome.desktop.interface gtk-theme 'Taeyang'
-gsettings set org.gnome.desktop.interface icon-theme 'Taeyang-Icons'
+gsettings set org.gnome.desktop.interface gtk-theme "Taeyang"
+gsettings set org.gnome.shell.extensions.user-theme name "Taeyang"
+gsettings set org.gnome.desktop.interface icon-theme "Taeyang-Icons"
+
 
 
 ### cleanup ###
-
-rm -rf /root/customize_gnome
