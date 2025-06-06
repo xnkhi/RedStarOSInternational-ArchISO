@@ -3,9 +3,9 @@
 
 ### replace gnome wallpapers ###
 
-echo "configure-desktop-dprk running."
-rm /usr/share/backgrounds/gnome/*
-mv /root/customize_gnome/wallpapers/* /usr/share/backgrounds/gnome/
+# echo "configure-desktop-dprk running."
+# rm /usr/share/backgrounds/gnome/*
+# mv /root/customize_gnome/wallpapers/* /usr/share/backgrounds/gnome/
 
 
 ### gnome extensions ###
